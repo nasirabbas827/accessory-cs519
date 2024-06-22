@@ -70,14 +70,14 @@ $total_price_with_discount = $total_price ;
                             <tr>
                                 <td><?php echo $item['product_name']; ?></td>
                                 <td><?php echo $item['quantity']; ?></td>
-                                <td>$<?php echo number_format($item['discount_price'], 2); ?></td>
-                                <td>$<?php echo number_format($item['discount_price'] * $item['quantity'], 2); ?></td>
+                                <td><?php echo number_format($item['discount_price'], 2); ?> Pkr</td>
+                                <td><?php echo number_format($item['discount_price'] * $item['quantity'], 2); ?> Pkr</td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
                 <div class="text-right">
-                    <h4>Total: $<?php echo number_format($total_price_with_discount, 2); ?></h4>
+                    <h4>Total: <?php echo number_format($total_price_with_discount, 2); ?> Pkr</h4>
                     </div>
                     <div>
                     <form action="place_order.php" method="post">

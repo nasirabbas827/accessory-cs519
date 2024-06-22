@@ -88,8 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button type="submit" class="btn btn-sm btn-primary">Update</button>
                             </form>
                         </td>
-                        <td>$<?php echo number_format($item['discount_price'], 2); ?></td>
-                        <td>$<?php echo number_format($item['discount_price'] * $item['quantity'], 2); ?></td>
+                        <td><?php echo number_format($item['discount_price'], 2); ?> Pkr</td>
+                        <td><?php echo number_format($item['discount_price'] * $item['quantity'], 2); ?> Pkr</td>
                         <td>
                             <a href="view_cart.php?remove=true&product_id=<?php echo $item['product_id']; ?>"
                                class="btn btn-danger">Remove</a>
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </tbody>
             </table>
             <div class="text-right">
-                <h4>Total: $<?php echo number_format($total_price, 2); ?></h4>
+                <h4>Total: <?php echo number_format($total_price, 2); ?> Pkr</h4>
                 <a href="checkout.php" class="btn btn-primary">Proceed to Checkout</a>
             </div>
         </div>

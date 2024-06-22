@@ -11,8 +11,7 @@ if (!isset($_SESSION["id"]) || $_SESSION["usertype"] != "admin") {
 // Fetch total counts from the database
 $sql_counts = "SELECT 
                 (SELECT COUNT(*) FROM users WHERE usertype = 'buyer') AS total_buyers,
-                (SELECT COUNT(*) FROM stores) AS total_stores,
-                (SELECT COUNT(*) FROM products) AS total_products,
+                              (SELECT COUNT(*) FROM products) AS total_products,
                 (SELECT COUNT(*) FROM orders) AS total_orders,
                 (SELECT COUNT(*) FROM reviews) AS total_reviews,
                 (SELECT COUNT(*) FROM complaints) AS total_complaints";

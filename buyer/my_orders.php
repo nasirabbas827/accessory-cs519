@@ -47,7 +47,7 @@ $result_orders = mysqli_query($conn, $sql_orders);
                             <?php while ($row = mysqli_fetch_assoc($result_orders)): ?>
                                 <tr>
                                     <td><?php echo $row['OrderID']; ?></td>
-                                    <td>$<?php echo number_format($row['TotalPrice'], 2); ?></td>
+                                    <td><?php echo number_format($row['TotalPrice'], 2); ?> Pkr</td>
                                     <td><?php echo $row['DeliveryAddress']; ?></td>
                                     <td><?php echo $row['OrderStatus']; ?></td>
                                     <td>

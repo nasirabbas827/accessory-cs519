@@ -126,7 +126,7 @@ include('navbar.php');
                                     <img class="card-img-top" src="./seller/products_images/<?php echo $row_new_arrival['ImageURL']; ?>" alt="Product Image" height="200px">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row_new_arrival['ProductName']; ?></h5>
-                                        <p class="card-text">$<?php echo number_format($row_new_arrival['Price'], 2); ?></p>
+                                        <p class="card-text"><?php echo number_format($row_new_arrival['Price'], 2); ?> Pkr</p>
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ include('navbar.php');
                                 <p class="card-text">Category: <?php echo $row['category_name']; ?></p>
                                 <p class="card-text">Description: <?php echo $row['Description']; ?></p>
                                 <p class="card-text">Quantity Available: <?php echo $row['StockQuantity']; ?></p>
-                                <p class="card-text"><strong>Original Price:</strong> $<?php echo number_format($row['Price'], 2); ?></p>
+                                <p class="card-text"><strong>Price: </strong><?php echo number_format($row['Price'], 2); ?> Pkr</p>
                                 <?php
                                 ?>
                                 <form action="add_to_cart.php" method="post" class="add-to-cart-form">

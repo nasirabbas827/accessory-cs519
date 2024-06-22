@@ -122,7 +122,7 @@ $result_products = mysqli_query($conn, $sql_products);
                                 <p class="card-text">Category: <?php echo $row['category_name']; ?></p>
                                 <p class="card-text">Description: <?php echo $row['Description']; ?></p>
                                 <p class="card-text">Quantity Available: <?php echo $row['StockQuantity']; ?></p>
-                                <p class="card-text"><strong>Original Price:</strong> $<?php echo number_format($row['Price'], 2); ?></p>
+                                <p class="card-text"><strong>Price:</strong> <?php echo number_format($row['Price'], 2); ?> Pkr</p>
                                 <form action="add_to_cart.php" method="post" class="add-to-cart-form">
                                     <input type="hidden" name="product_id" value="<?php echo $row['ProductID']; ?>">
                                     <input type="hidden" class="max-quantity" value="<?php echo $row['StockQuantity']; ?>">
