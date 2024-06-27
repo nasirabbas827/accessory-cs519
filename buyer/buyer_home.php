@@ -95,9 +95,6 @@ $result_products = mysqli_query($conn, $sql_products);
                 <div class="col-md-2 mb-3">
                     <input type="text" class="form-control" placeholder="Search by product name" name="product_name" value="<?php echo $product_name; ?>">
                 </div>
-                <div class="col-md-2 mb-3">
-                    <input type="text" class="form-control" placeholder="Search by store name" name="store_name" value="<?php echo $store_name; ?>">
-                </div>
                 <div class="col-md-1 mb-3">
                     <input type="number" class="form-control" placeholder="Min price" name="min_price" value="<?php echo $min_price; ?>">
                 </div>
@@ -116,7 +113,7 @@ $result_products = mysqli_query($conn, $sql_products);
                 <?php while ($row = mysqli_fetch_assoc($result_products)) : ?>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img class="card-img-top" src="../seller/products_images/<?php echo $row['ImageURL']; ?>" alt="Product Image">
+                            <img class="card-img-top" src="../admin/products_images/<?php echo $row['ImageURL']; ?>" alt="Product Image">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row['ProductName']; ?></h5>
                                 <p class="card-text">Category: <?php echo $row['category_name']; ?></p>

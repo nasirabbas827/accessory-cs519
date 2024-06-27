@@ -32,7 +32,6 @@ if(isset($_POST['product_id'], $_POST['quantity'])) {
             'product_id' => $product_id,
             'quantity' => $quantity,
             'price' => $product['Price'],
-            'discount_price' => $product['Price'] - ($product['Price'] * 0.05),
             'product_name' => $product['ProductName']
         ];
 

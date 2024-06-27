@@ -123,7 +123,7 @@ include('navbar.php');
                             ?>
                             <div class="col-md-4">
                                 <div class="card" style="height: 100%;">
-                                    <img class="card-img-top" src="./seller/products_images/<?php echo $row_new_arrival['ImageURL']; ?>" alt="Product Image" height="200px">
+                                    <img class="card-img-top" src="admin/products_images/<?php echo $row_new_arrival['ImageURL']; ?>" alt="Product Image" height="200px">
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $row_new_arrival['ProductName']; ?></h5>
                                         <p class="card-text"><?php echo number_format($row_new_arrival['Price'], 2); ?> Pkr</p>
@@ -189,7 +189,7 @@ include('navbar.php');
                 <?php while ($row = mysqli_fetch_assoc($result_products)) : ?>
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img class="card-img-top" src="./seller/products_images/<?php echo $row['ImageURL']; ?>" alt="Product Image">
+                            <img class="card-img-top" src="admin/products_images/<?php echo $row['ImageURL']; ?>" alt="Product Image">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row['ProductName']; ?></h5>
                                 <p class="card-text">Category: <?php echo $row['category_name']; ?></p>

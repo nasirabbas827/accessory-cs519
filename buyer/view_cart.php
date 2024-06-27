@@ -88,14 +88,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button type="submit" class="btn btn-sm btn-primary">Update</button>
                             </form>
                         </td>
-                        <td><?php echo number_format($item['discount_price'], 2); ?> Pkr</td>
-                        <td><?php echo number_format($item['discount_price'] * $item['quantity'], 2); ?> Pkr</td>
+                        <td><?php echo number_format($item['price'], 2); ?> Pkr</td>
+                        <td><?php echo number_format($item['price'] * $item['quantity'], 2); ?> Pkr</td>
                         <td>
                             <a href="view_cart.php?remove=true&product_id=<?php echo $item['product_id']; ?>"
                                class="btn btn-danger">Remove</a>
                         </td>
                     </tr>
-                    <?php $total_price += $item['discount_price'] * $item['quantity']; ?>
+                    <?php $total_price += $item['price'] * $item['quantity']; ?>
                 <?php endforeach; ?>
                 </tbody>
             </table>
